@@ -1,0 +1,63 @@
+@import './element-ui.scss';
+
+html,body,p,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,menu,em,strong,b,i,u,a {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+ul,li,ol {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+  font-family: "PingFang SC", "microsoft YaHei";
+}
+
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.content-view {
+
+  /** fade animation **/
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity .5s ease;
+  }
+
+  .fade-enter,
+  .fade-leave-to
+
+  /* .fade-leave-active in below version 2.1.8 */
+    {
+    opacity: 0;
+  }
+
+  .view,
+  .sub-view {
+    -webkit-transition: all .5s cubic-bezier(.55, 0, .1, 1);
+    transition: all .5s cubic-bezier(.55, 0, .1, 1);
+  }
+
+  .slide-left-enter,
+  .slide-right-leave-active {
+    opacity: 0;
+    -webkit-transform: translate(30px, 0);
+    transform: translate(30px, 0);
+  }
+
+  .slide-left-leave-active,
+  .slide-right-enter {
+    opacity: 0;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
